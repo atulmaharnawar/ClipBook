@@ -32,7 +32,7 @@ const Navbar = () => {
         </Link>
         <div className='relative hidden lg:block'>
           <form onSubmit={handleSearch} className='absolute md:static top-10 -left-20 bg-[#121212]'>
-            <input type="text" value={searchValue} onChange={(e)=>setSearchValue(e.target.value)} placeholder='Search accounts and vidoes' className='bg-white p-3 md:text-md font-medium border-2 border-white focus:outline-none hover:border-[#FF4136] w-[300px] md:w-[350px] rounded-full md:top-0 text-black'/>
+            <input type="text" value={searchValue} onChange={(e)=>setSearchValue(e.target.value)} placeholder='Search accounts and videos' className='bg-white p-3 md:text-md font-medium border-2 border-white focus:outline-none hover:border-[#FF4136] w-[300px] md:w-[350px] rounded-full md:top-0 text-black'/>
             <button onClick={handleSearch} className='absolute md:right-5 right-6 top-4 border-left-2 text-2xl pl-4 text-orange-600' >
               <BiSearch />
             </button>
