@@ -26,6 +26,8 @@ const Detail = ({postDetails}:IProps) => {
   const videoRef=useRef<HTMLVideoElement|null>(null);
   const [isPlaying, setIsPlaying] = useState(false)
   const [isMuted, setIsMuted] = useState(false)
+  const [isPostingComment, setIsPostingComment] = useState(false)
+  const [comment, setComment] = useState('')
   const router=useRouter();
   const{ userProfile }:any =useAuthStore();
 
@@ -48,9 +50,6 @@ const Detail = ({postDetails}:IProps) => {
     }
   }, [post,isMuted])
 
-  if(!post && videoRef?.current){
-    return null;
-  }
 
   const handleLike=async(like:boolean)=>{
     if(userProfile){
@@ -63,8 +62,6 @@ const Detail = ({postDetails}:IProps) => {
     }
   }
 
-  const [isPostingComment, setIsPostingComment] = useState(false)
-  const [comment, setComment] = useState('')
 
   const addComment=async(e)=>{
     e.preventDefault();
