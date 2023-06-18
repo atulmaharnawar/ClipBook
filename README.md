@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+
+# ClipBook
+https://clip-book-seven.vercel.app/
+ClipBook is a video sharing social media application.Users can log in and upload the new videos or delete their posted vidoes.Users can view details,like and comments on videos posted by users.Able to view the profile of users and their posted videos.Users can search posts by user profiles and popular video categories.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -38,6 +43,4 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 =======
-# ClipBook
-ClipBook is a video sharing social media application.Users can log in and upload the new videos or delete their posted vidoes.Users can view details,like and comments on videos posted by users.Able to view the profile of users and their posted videos.Users can search posts by user profiles and popular video categories.
 >>>>>>> origin/main
