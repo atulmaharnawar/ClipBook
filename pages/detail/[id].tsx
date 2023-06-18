@@ -31,8 +31,6 @@ const Detail = ({postDetails}:IProps) => {
   const router=useRouter();
   const{ userProfile }:any =useAuthStore();
 
-  if(!post) return null;
-
   const onVideoClick = () => {
     if(isPlaying){
       videoRef?.current?.pause();
@@ -50,6 +48,8 @@ const Detail = ({postDetails}:IProps) => {
     }
   }, [post,isMuted])
 
+
+  if(!post) return null;
 
   const handleLike=async(like:boolean)=>{
     if(userProfile){
