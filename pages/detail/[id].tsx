@@ -48,6 +48,10 @@ const Detail = ({postDetails}:IProps) => {
     }
   }, [post,isMuted])
 
+  if(!post && videoRef?.current){
+    return null;
+  }
+
   const handleLike=async(like:boolean)=>{
     if(userProfile){
       const{data} =await axios.put(`${BASE_URL}/api/like`,{
