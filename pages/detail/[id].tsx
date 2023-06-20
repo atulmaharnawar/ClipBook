@@ -62,6 +62,7 @@ const Detail = ({postDetails}:IProps) => {
     }
   }
 
+  
 
   const addComment=async(e)=>{
     e.preventDefault();

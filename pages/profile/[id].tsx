@@ -6,6 +6,7 @@ import VideoCard from '../../components/VideoCard';
 import NoResults from '../../components/NoResults';
 import {IUser,Video} from '../../types';
 import { BASE_URL } from '../../utils';
+import useAuthStore from '../../store/authStore';
 
 
 interface IProps{
@@ -20,10 +21,15 @@ interface IProps{
 const Profile=({data}:IProps)=>{
 
     const {user,userVideos,userLikedVideos} = data;
+    const {userProfile}:{userProfle:any}=useAuthStore();
     const [showUserVideos, setShowUserVideos] = useState(true)
     const videos=showUserVideos?'border-b-2 border-[#FF4136]':'text-white'
     const liked=!showUserVideos?'border-b-2 border-[#FF4136]':'text-white'
     const [videoList, setVideoList] = useState<Video[]>([])
+    
+
+    console.log(user);
+    console.log(userProfile);
 
     useEffect(()=>{
         if(showUserVideos){
@@ -34,6 +40,7 @@ const Profile=({data}:IProps)=>{
         }
     },[showUserVideos,userLikedVideos,userVideos])
 
+
     return (
         <div className='w-full'>
             <div className="flex gap-6 md:gap-10 mb-4 bg-[#121212] w-full">
@@ -43,7 +50,8 @@ const Profile=({data}:IProps)=>{
             <div className="flex flex-col justify-center">
                 <p className='flex gap-1 items-center justify-center text-md font-bold text-white lowercase md:text-2xl tracking-wider'>
                     {user.userName.replaceAll(' ','')}
-                    <GoVerified className='text-blue-400' />
+                    <GoVerified className='text-blue-700' />
+                    
                 </p>
                 <p className='capitalize text-gray-200 text-xs md:text-xl'>
                 {user.userName}
